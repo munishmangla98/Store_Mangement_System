@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block body %}
+        <main>
+            <div class="infotable">
+
+                <table>
+                    <thead>
+                        <!-- <th>Budget_head_id</th> -->
+                        <a href="/add_order"  class="btnaddnew">Add New</a>
+                    </thead>
+                    <thead>
+                        <th>Order_id</th>
+                        <th>Items</th>
+                        <th>Order_Date_Placed</th>
+                        <th>Order_Receive_Date</th>
+                        <th>Vendor_company_name</th>
+                        <th>Total_Order_Amount</th>
+                        <th>Payment_Status</th>
+                        <th>Mode_of_Payment</th>
+                        <th>Transtion_id</th>
+                        <th>Bill_No</th>
+                        <th>Remarks</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {% for order_master in  order_master %}
+                        
+                        <tr>
+                            <td>{{order_master.order_id}}</td>
+                            <td>{{order_master.items}}</td>
+                            <td>{{order_master.order_date_placed}}</td>
+                            <td>{{order_master.order_recieve_date}}</td>
+                            <td>{{order_master.vendor_company_name}}</td>
+                            <td>{{order_master.total_order_amount}}</td>
+                            <td>{{order_master.payment_status}}</td>
+                            <td>{{order_master.Mode_of_payment}}</td>
+                            <td>{{order_master.transaction_id}}</td>
+                            <td>{{order_master.Bill_No}}</td>
+                            <td>{{order_master.Remarks}}</td>
+                            <td>
+                                <a href="/orderupdate/{{order_master.order_id}}" target="_self" class="btnedit" >Edit</a>
+                      
+                                <a href="/deleteorderdetail/{{order_master.order_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+                            </td>
+                          </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+{% endblock %}
+

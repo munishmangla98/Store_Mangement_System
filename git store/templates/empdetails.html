@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: green;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body>
+
+<h2>Employee Details</h2>
+<!-- <a href="/edit/0">
+    <button class="btn btn-primary text-uppercase"> 
+    Add a new post
+    </button>
+    </a> -->
+<!-- <p>If you have a table that is too wide, you can add a container element with overflow-x:auto around the table, and it will display a horizontal scroll bar when needed.</p> -->
+<!-- <p>Resize the browser window to see the effect. Try to remove the div element and see what happens to the table.</p> -->
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <th>Sr.no</th>
+      <th>Team Member Name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Mobile No</th>
+      <th>Gender</th>
+      <th>Occupation</th>
+      <th>ID Type</th>
+      <th>ID No.</th>
+      <th>Issused Authority</th>
+      <th>Joining Status</th>
+      <th>DOJ</th>
+      <th>Address</th>
+      <th>Nationality</th>
+      <th>State</th>
+      <th>District</th>
+      <th>Block No.</th>
+      <th>Word No.</th>
+      <th>PINCODE</th>
+      
+    </thead>
+    <tbody>
+    
+      {% for team in team %}
+      <tr>
+        <td>{{team.sno}}</td>
+        <td>{{team.name}}</td>
+        <td>{{team.dob}}</td>
+        <td>{{team.email}}</td>
+        <td>{{team.phone_num}}</td>
+        <td>{{team.gender}}</td>
+        <td>{{team.occupation}}</td>
+        <td>{{team.id_type}}</td>
+        <td>{{team.id_no}}</td>
+        <td>{{team.authority}}</td>
+        <td>{{team.join_status}}</td>
+        <td>{{team.doj}}</td>
+        <td>{{team.address}}</td>
+        <td>{{team.nationality}}</td>
+        <td>{{team.state}}</td>
+        <td>{{team.district}}</td>
+        <td>{{team.block_no}}</td>
+        <td>{{team.ward_no}}</td>
+        <td>{{team.pincode}}</td>
+
+        <td>
+          <a href="/teamupdating/{{team.sno}}" target="_blank" class="btnedit" >Edit</a>`
+
+          <a href="/deleteemp/{{team.sno}}" <button class="btndanger" onclick="return confirm('Are you sure to Delete the data')" type="button" >DELETE</button></a>
+          
+          <!-- <button id="sendMessage" type="submit">submit</button> </a> -->
+        </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+
+  <!-- <button id="sendMessage" type="submit">submit</button> -->
+</div>
+
+</body>
+</html>

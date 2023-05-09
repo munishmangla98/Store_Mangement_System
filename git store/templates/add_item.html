@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <a href="/item" class="btnaddnew" >Item</a>
+    </div>
+    <form action="/add_item" method="post">
+        <div class="row">
+            <label>Item_Name</label>
+            <input type="text" placeholder="Enter Item Name" id="itm_name" name="itm_name" required>
+            <label style="font-size: 11px;">Vendor Company Name</label>
+            <input type="text" placeholder="Enter Vendor Company" id="vcn" name="vcn" required>
+
+           <label>Item Configuration</label>
+           <input type="text" placeholder="Enter Item Configuration" id="itm_config" name="itm_config" required>
+        </div>
+
+        <div class="row">
+            <label>Item Model</label>
+            <input type="text" placeholder="Enter Item Model" id="itm_mdl" name="itm_mdl" required>
+            <label style="font-size: 13px;">Item Company Name</label>
+            <input type="text" placeholder="Enter Item Company" id="itm_comp" name="itm_comp" required>
+            <label>Item Warranty</label>
+            <input type="text" placeholder="Enter Warranty" id="itm_warnt" name="itm_warnt" required>
+        </div>
+
+        <div class="row">
+
+            <label>Item Price</label>
+            <input type="number" placeholder="Enter Price" id="itm_pr" name="itm_pr" required>
+            <label>Item Quantity</label>
+            <input type="number" placeholder="Enter Quantity" id="itm_qnt" name="itm_qnt" required>
+            <label>Budget ID</label>
+            <input type="text" placeholder="Enter Budget_ID" id="bgt_id" name="bgt_id" required>
+        </div>
+
+        <div class="row">
+
+            <label>Project_Id</label>
+            <input type="text" placeholder="Enter Project_Id" id="prj_id" name="prj_id" required>
+            <label>Purchase Date</label>
+            <input type="date" placeholder="Enter Your Purchase Date" id="ipd" name="ipd" required>
+            <label>Purchase Under Project</label>
+            <input type="text" placeholder="Enter Project" id="pur_und" name="pur_und" required>
+        </div>
+        
+        <div class="row">
+            <label>Stock Register page No.</label>
+            <input type="text" placeholder="Enter Register Page No." id="srpn" name="srpn" required>
+            <label>Online_Entry_ID</label>
+            <input type="text" placeholder="Enter Entry_ID" id="oei" name="oei" required>
+
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

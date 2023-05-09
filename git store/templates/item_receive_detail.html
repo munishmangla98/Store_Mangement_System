@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: darkgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 15px;
+  padding-left: 0px;
+  /* margin-left:0px; */
+  height: 100px; /* Used in this example to enable scrolling */
+  overflow: hidden;
+  position: fixed;
+  top: 8px;
+  /* left: 0px; */
+  width: 100%;
+}
+.main h1{
+	background-color: aqua;
+	padding-left: 10px;
+	top: 8px;
+	height: 36px;
+	margin-left:0px ;
+	text-align: center;
+}
+.infotable table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  /* overflow-y: auto;
+  overflow-x: auto; */
+  overflow: auto;
+  border: 1px solid black;
+  margin-top: 80px;
+}
+th{
+	position: sticky;
+	top: 70px;
+	background-color: antiquewhite;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid black
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/Item_receive_back">Add New Item_receive_back</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>item__receive__back__Full__Details</h1>
+</div>
+
+<div class="infotable">
+
+	<table>
+		<thead>
+			<th>item_receive_back_id</th>
+			<th>Employee_id</th>
+            <th>Project_Id</th>
+            <th>Item_id</th>
+            <th>allotment_Id</th>
+            <th>Item_Receive_Date</th>
+			<!-- <th>Item_Quantity_Issue</th> -->
+            <th>item_Receive_Quantity</th>
+            <th>Item_Placement_Area</th>
+            <th>Remarks</th>
+            <th>Action</th>
+		</thead>
+		<tbody>
+			{% for item__receive__back in  item__receive__back %}
+		  <tr>
+            <td>{{item__receive__back.item_receive_back_id}}</td>
+            <td>{{item__receive__back.employee_id}}</td>
+            <td>{{item__receive__back.project_id}}</td>
+			<td>{{item__receive__back.item_id}}</td>
+			<td>{{item__receive__back.allotment_Id}}</td>
+			<td>{{item__receive__back.item_receive_date}}</td>
+			<td>{{item__receive__back.item_receive_quantity}}</td>
+            <td>{{item__receive__back.item_placement_area}}</td>
+            <td>{{item__receive__back.Remarks}}</td>
+			<td>
+				<a href=" " target="_blank" class="btnedit" >Edit</a>
+	  
+				<a href="/deleteitmrec/{{item__receive__back.item_receive_back_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+			</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
+
+ 

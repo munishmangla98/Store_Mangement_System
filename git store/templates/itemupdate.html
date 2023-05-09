@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <a href="/item" class="btnaddnew" >Item</a>
+    </div>
+
+    {%with messages = get_flashed_messages()%}
+
+    {%if messages%}
+    
+    {%for message in messages%}
+    <div class="alert alert-sucess alert-dismissable" role="alert" style="color:green; font-weight: bolder; text-align: center;">
+        <span aria-hidden="true"></span>
+      </botton>
+      {{message}}
+    </div>
+    
+    <!-- {{message}} -->
+    
+    {%endfor%}
+    {%endif%}
+    {%endwith%}
+    
+    <form action="/add_item" method="post">
+        <div class="row">
+            <label>Item_Name</label>
+            <input type="text" placeholder="Enter Item Name" id="itm_name" name="itm_name" value="{{item__master.item_name}}" required>
+
+            <label style="font-size: 11px;">Vendor Company Name</label>
+            <input type="text" placeholder="Enter Vendor Company" id="vcn" name="vcn" value="{{item__master.	vendor_company_name}}" required>
+
+           <label>Item Configuration</label>
+           <input type="text" placeholder="Enter Item Configuration" id="itm_config" name="itm_config" value="{{item__master.item_configuration}}" required>
+        </div>
+
+        <div class="row">
+            <label>Item Model</label>
+            <input type="text" placeholder="Enter Item Model" id="itm_mdl" name="itm_mdl" value="{{item__master.item_model}}" required>
+            <label style="font-size: 13px;">Item Company Name</label>
+            <input type="text" placeholder="Enter Item Company" id="itm_comp" name="itm_comp" value="{{item__master.item_company}}" required>
+
+            <label>Item Warranty</label>
+            <input type="text" placeholder="Enter Warranty" id="itm_warnt" name="itm_warnt" value="{{item__master.item_warranty}}" required>
+        </div>
+
+        <div class="row">
+
+            <label>Item Price</label>
+            <input type="number" placeholder="Enter Price" id="itm_pr" name="itm_pr" value="{{item__master.item_price}}" required>
+            <label>Item Quantity</label>
+            <input type="number" placeholder="Enter Quantity" id="itm_qnt" name="itm_qnt" value="{{item__master.item_quantity}}" required>
+            <label>Budget ID</label>
+            <input type="text" placeholder="Enter Budget_ID" id="bgt_id" name="bgt_id" value="{{item__master.budget_id}}" required>
+        </div>
+
+        <div class="row">
+
+            <label>Project_Id</label>
+            <input type="text" placeholder="Enter Project_Id" id="prj_id" name="prj_id" value="{{item__master.project_id}}" required>
+            <label>Purchase Date</label>
+            <input type="date" placeholder="Enter Your Purchase Date" id="ipd" name="ipd" value="{{item__master.item_purchase_date}}" required>
+
+            <label>Purchase Under Project</label>
+            <input type="text" placeholder="Enter Project" id="pur_und" name="pur_und" value="{{item__master.Purchase_under}}" required>
+        </div>
+        
+        <div class="row">
+            <label>Stock Register page No.</label>
+            <input type="text" placeholder="Enter Register Page No." id="srpn" name="srpn" value="{{item__master.stock_register_page_no}}" required>
+            <label>Online_Entry_ID</label>
+            <input type="text" placeholder="Enter Entry_ID" id="oei" name="oei" value="{{item__master.online_entry_id}}" required>
+
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

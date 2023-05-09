@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <h1>Add New employee</h1>
+    </div>
+    <form action="/add_order" method="post">
+        <div class="row">
+            <label>Items</label>
+            <input type="number" placeholder="Enter items" id="items" name="items" required>
+            <label>Order Placed Date</label>
+                            <input type="date" placeholder="Enter Order_Placed_Date" id="odp" name="odp" required>
+                            <label>Oder Recive Date</label>
+                            <input type="date" placeholder="Enter Oder_Recive_Date" id="ord" name="ord" required>
+        </div>
+        <div class="row">
+            <label>Vendor Company Name</label>
+            <input type="text" placeholder="Enter Vendor Company" id="vcn" name="vcn" required>
+            <label>Total Order amount</label>
+            <input type="number" placeholder="Enter Total_Order_amount" id="toa" name="toa" required>
+           <label>Payment Status</label>
+                            <input type="text" placeholder="Enter Payment_Status" id="p_s" name="p_s" required>
+        </div>
+        <div class="row">
+            <label>Mode Of Payment</label>
+            <input type="text" placeholder="Enter Mode_Of_Payment" id="Mop" name="Mop" required>
+            <label>Transaction_ID</label>
+            <input type="text" placeholder="Enter Transaction_ID" id="trans_id" name="trans_id" required>
+            <label>Bill NO.</label>
+            <input type="text" placeholder="Enter Bill NO." id="B_n" name="B_n" required>
+                </div>
+        <div class="row">
+            <label>Remarks</label>
+            <input type="text" placeholder="Enter Remarks" id="Rmk" name="Rmk" required>
+            <!-- <label>Date Of Retirement</label>
+            <input type="date" placeholder="Enter Date_Of_Retirement" id="dor" name="dor" required>
+            <label>Designation</label>
+            <input type="text" placeholder="Enter Staff_Designation" id="designation" name="designation" required> -->
+        </div>
+        
+        <div class="row">
+
+
+        </div>
+        <!-- <div class="row">
+            <label>Staff Gender</label>
+                            <select required id="gender" name="gender">
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+            <label>House Address</label>
+            <input type="text" placeholder="Enter Staff_House_Address" id="house_address" name="house_address" required>
+            <label>Remarks</label>
+            <input type="text" placeholder="Enter Remarks" id="remarks" name="remarks" required>
+        </div> -->
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

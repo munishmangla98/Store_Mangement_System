@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+
+<div class="infotable">
+
+	<table>
+        <thead>
+            <!-- <th>Budget_head_id</th> -->
+            <a href="/add_project "  class="btnaddnew">Add New</a>
+        </thead>
+		<thead>
+			<th>Project_id</th>
+			<th>Employee_id</th>
+            <th>Item_id</th>
+			<th>Items_Requiered</th>
+            <th>Total_Item_Issues</th>
+			<th>Budget_Id</th>
+            <th>Project_Budget_Session</th>
+            <th>Mode_of_Payment</th>
+            <th>Remarks</th>
+            <th>Action</th>
+		</thead>
+		<tbody>
+			{% for project__details in  project__details %}
+		  <tr>
+			<td>{{project__details.project_id}}</td>
+            <td>{{project__details.employee_id}}</td>
+			<td>{{project__details.item_id}}</td>
+			<td>{{project__details.items_requiered}}</td>
+			<td>{{project__details.total_item_issues}}</td>
+			<td>{{project__details.budget_id}}</td>
+            <td>{{project__details.project_budget_session}}</td>
+            <td>{{project__details.project_budget}}</td>
+            <td>{{project__details.Remarks}}</td>
+			<td>
+				<a href=" " target="_blank" class="btnedit" >Edit</a>
+	  
+				<a href="/deleteproject/{{project__details.project_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+			</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+</main>
+{% endblock %}
+
+

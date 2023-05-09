@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+        <main>
+            <div class="addnew">
+                <h1>
+                    <a href="/add_item" class="btnaddnew" >Add New</a>
+              
+        
+             
+                </h1>
+            </div>
+            <div class="infotable">
+
+                <table>
+                    <thead>
+                        <th>item_id</th>
+                        <th>Vendor_company_name</th>
+                        <th>Item_Name</th>
+                        <th>Item_Configuration</th>
+                        <th>Item_Model</th>
+                        <th>Item_Company</th>
+                        <th>Item_Warranty</th>
+                        <th>Item_Price</th>
+                        <th>Item_Quantity</th>
+                        <th>Budget_Id</th>
+                        <th>Project_Id</th>
+                        <th>Item_Purchase_Date</th>
+                        <th>Purchase_Under</th>
+                        <th>Stock_Register_Page_No</th>
+                        <th>Online_Entry_Id</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+    			{% for 	item__master in  item__master %}
+                        
+                        <tr>
+                            <td>{{item__master.item_id}}</td>
+                            <td>{{item__master.	vendor_company_name}}</td>
+                            <td>{{item__master.item_name}}</td>
+                                  <td>{{item__master.item_configuration}}</td>
+                                  <td>{{item__master.item_model}}</td>
+                                  <td>{{item__master.item_company}}</td>
+                                  <td>{{item__master.item_warranty}}</td>
+                            <td>{{item__master.item_price}}</td>
+                            <td>{{item__master.item_quantity}}</td>
+                            <td>{{item__master.budget_id}}</td>
+                            <td>{{item__master.project_id}}</td>
+                            <td>{{item__master.item_purchase_date}}</td>
+                            <td>{{item__master.Purchase_under}}</td>
+                            <td>{{item__master.stock_register_page_no}}</td>
+                            <td>{{item__master.online_entry_id}}</td>
+                            <td>
+                                <a href="/itemupdate/{{item__master.item_id}}" target="_self" class="btnedit" >Edit</a>
+                      
+                                <a href="/deleteitem/{{item__master.item_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+                            </td>
+                          </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+{% endblock %}
+

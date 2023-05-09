@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: darkgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 15px;
+  padding-left: 0px;
+  /* margin-left:0px; */
+  height: 100px; /* Used in this example to enable scrolling */
+  overflow: hidden;
+  position: fixed;
+  top: 8px;
+  /* left: 0px; */
+  width: 100%;
+}
+.main h1{
+	background-color: aqua;
+	padding-left: 10px;
+	top: 8px;
+	height: 36px;
+	margin-left:0px ;
+	text-align: center;
+}
+.infotable table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  /* overflow-y: auto;
+  overflow-x: auto; */
+  overflow: auto;
+  border: 1px solid black;
+  margin-top: 80px;
+}
+th{
+	position: sticky;
+	top: 70px;
+	background-color: antiquewhite;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/Project_details">Add New Project</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>Project__details__Full__Details</h1>
+</div>
+
+<div class="infotable">
+
+	<table>
+		<thead>
+			<th>Project_id</th>
+			<th>Employee_id</th>
+            <th>Item_id</th>
+			<th>Items_Requiered</th>
+            <th>Total_Item_Issues</th>
+			<th>Budget_Id</th>
+            <th>Project_Budget_Session</th>
+            <th>Mode_of_Payment</th>
+            <th>Remarks</th>
+            <th>Action</th>
+		</thead>
+		<tbody>
+			{% for project__details in  project__details %}
+		  <tr>
+			<td>{{project__details.project_id}}</td>
+            <td>{{project__details.employee_id}}</td>
+			<td>{{project__details.item_id}}</td>
+			<td>{{project__details.items_requiered}}</td>
+			<td>{{project__details.total_item_issues}}</td>
+			<td>{{project__details.budget_id}}</td>
+            <td>{{project__details.project_budget_session}}</td>
+            <td>{{project__details.project_budget}}</td>
+            <td>{{project__details.Remarks}}</td>
+			<td>
+				<a href=" " target="_blank" class="btnedit" >Edit</a>
+	  
+				<a href="/deleteproject/{{project__details.project_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+			</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
+
+ 

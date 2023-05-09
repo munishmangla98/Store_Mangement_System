@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div class="infotable">
+
+        <table>
+            <thead>
+                <!-- <th>Budget_head_id</th> -->
+                <a href="/add_emp"  class="btnaddnew">Add New</a>
+            </thead>
+            <thead>
+                <th>Id</th>
+                <th>DOR</th>
+                <th>F-Name</th>
+                <th>M-Name</th>
+                <th>L-Name</th>
+                <th>Email</th>
+                <th>Mobile-No</th>
+                <th>A-Mobile-No</th>
+                <th>Gender</th>
+                <th>Nature_Of_Job</th>
+                <th>DOJ</th>
+                <th>DOR</th>
+                <th>Category</th>
+                <th>Designation</th>
+                <th>House_Address</th>
+                <th>Remarks</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                {% for employee_master in employee_master %}
+                <tr>
+                    <td>{{employee_master.employee_id}}</td>
+                    <td>{{employee_master.date_of_registration}}</td>
+                    <td>{{employee_master.staff_Fname}}</td>
+                    <td>{{employee_master.staff_Mname}}</td>
+                    <td>{{employee_master.staff_Lname}}</td>
+                    <td>{{employee_master.staff_email}}</td>
+                    <td>{{employee_master.staff_mobile_no}}</td>
+                    <td>{{employee_master.staff_alternative_mobile_no}}</td>
+                    <td>{{employee_master.staff_gender}}</td>
+                    <td>{{employee_master.nature_of_job}}</td>
+                    <td>{{employee_master.staff_date_of_joining}}</td>
+                    <td>{{employee_master.staff_date_of_retirement}}</td>
+                    <td>{{employee_master.staff_category}}</td>
+                    <td>{{employee_master.staff_designatin}}</td>
+                    <td>{{employee_master.staff_house_address}}</td>
+                    <td>{{employee_master.staff_remarks}}</td>
+                    <td>
+                        <a href="/empupdate/{{employee_master.employee_id}}"  class="btnedit" >Edit</a>
+              
+                        <a href="/deleteemployee/{{employee_master.employee_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+
+{% endblock %}

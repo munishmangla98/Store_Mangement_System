@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: darkgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 15px;
+  padding-left: 0px;
+  /* margin-left:0px; */
+  height: 100px; /* Used in this example to enable scrolling */
+  overflow: hidden;
+  position: fixed;
+  top: 8px;
+  /* left: 0px; */
+  width: 100%;
+}
+.main h1{
+	background-color: aqua;
+	padding-left: 10px;
+	top: 8px;
+	height: 36px;
+	margin-left:0px ;
+	text-align: center;
+}
+.infotable table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  /* overflow-y: auto;
+  overflow-x: auto; */
+  overflow: auto;
+  border: 1px solid black;
+  margin-top: 80px;
+}
+th{
+	position: sticky;
+	top: 70px;
+	background-color: antiquewhite;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+.btnedit{
+    text-decoration: none;
+}
+.btndanger{
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/item_place">Add New Item_Place</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>item__Place__Full__   Details</h1>
+</div>
+
+<div class="infotable">
+
+	<table>
+		<thead>
+			<th>item_place_id</th>
+			<th>item_name</th>
+            <th>item_place_area</th>
+            <th>no_item</th>
+             <th>Remarks</th>
+            <!--<th>Item_Receive_Date</th> -->
+			<!-- <th>Item_Quantity_Issue</th> -->
+            <!-- <th>item_Receive_Quantity</th>
+            <th>Item_Placement_Area</th>
+            <th>Remarks</th> -->
+            <th>Action</th>
+		</thead>
+		<tbody>
+			{% for item_place in  item_place %}
+		  <tr>
+            <td>{{item_place.item_place_id}}</td>
+            <td>{{item_place.item_name}}</td>
+            <td>{{item_place.item_place_area}}</td>
+			<td>{{item_place.no_item}}</td>
+			<td>{{item_place.remarks}}</td>
+			<td>
+				<a href=" " target="_blank" class="btnedit" >Edit</a>
+                
+				<a href="/deleteitmrec/{#{{ item__receive__back.item_receive_back_id }}#}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+                
+                <!-- to comment any jinja command {#{{ item__receive__back.item_receive_back_id }}#} -->
+                
+			</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
+
+ 

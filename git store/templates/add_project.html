@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <a href="/item" class="btnaddnew" >Item</a>
+    </div>
+    <form action="/add_project" method="post">
+        <div class="row">
+            <label>Project Head</label>
+            <input type="text" placeholder="Enter Project_Head" id="e_id" name="e_id" required>
+            
+            <label>Item Name</label>
+            <input type="text" placeholder="Enter Item Name" id="itm_name" name="itm_name" required>
+
+          <label>Items Requiered</label>
+          <input type="text" placeholder="Enter Items_Requiered" id="itm_req" name="itm_req" required />
+        </div>
+
+        <div class="row">
+            <label>Total Item Issues</label>
+            <input type="text" placeholder="Enter Total_Item_Issues" id="t_i_i" name="t_i_i" required />
+            <label>Budget Name</label>
+            <input type="text" placeholder="Enter Budget_Name" id="bgt_name" name="bgt_name" required />
+            <label>Project Budget Session</label>
+            <input type="text" placeholder="Enter Project_Budget_Session" id="p_b_s" name="p_b_s" required />
+        </div>
+
+        <div class="row">
+            <label>Project Budget</label>
+            <input type="text" placeholder="Enter Project_Budget_Session" id="prj_bgt" name="prj_bgt" required />
+
+               <label>Remarks</label>
+                    <input type="text" placeholder="Enter Remarks" id="remk" name="remk" required />
+        </div>
+
+        
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

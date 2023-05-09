@@ -1,0 +1,236 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color:darkblue;
+	color: white;
+	padding: 10px;
+    height: 19px;
+    font-size: 18px;
+    text-align: center;
+}
+
+header h1{
+    /* padding: 1px; */
+    margin-top: 0;
+    word-spacing: 15px;
+}
+nav {
+	background-color: #f2f2f2;
+	height: 100%;
+	width: 100px;
+	position: fixed;
+	/* top: 10px; */
+	/* left: 0; */
+	/* overflow-x: hidden; */
+	padding-top: 20px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	padding: 1px;
+    background-color: lightslategray;
+}
+
+nav li a {
+	display: block;
+	color: #000;
+	padding: 8px 0;
+	text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px black solid;
+    text-align: center;
+}
+
+nav li a:hover {
+	background-color: white;
+}
+
+main {
+	/* margin-left: 200px; */
+	padding: 20px;
+}
+.addnew h1{
+    top: 10px;
+    margin-top:1px;
+    padding: 1px; 
+    font-size: 30px;
+}
+
+footer {
+	background-color: darkblue;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+    font-size: 20px;
+	text-align: center;
+    height: 50px;
+}
+footer h1{
+    margin: 15px;
+    word-spacing: 15px;
+
+}
+main{
+    /* text-align: center; */
+    margin-top: 0px;
+    margin-left: 145px;
+}
+.btnaddnew{
+    font-size: 30px;
+    
+}
+.infotable{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow-x: scroll;
+    border: 1px solid black;
+    
+  }
+  table{
+    /* table-layout: fixed;  */
+    width: 100%;
+
+    
+  }
+  th{
+      position: sticky;
+      top: 5px;
+      background-color: antiquewhite;
+  }
+  th, td {
+    text-align: center;
+    text-decoration: solid;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid black;
+    text-decoration: none;
+  }
+  .btnedit{
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bolder;
+  }
+  .btndanger{
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bolder;
+  }
+
+.btnaddnew{
+    text-decoration: none;
+    /* font-size: 25px;*/
+    font-weight: bolder;
+}
+
+/*.btnrecive{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+} */
+
+h1{
+    font-size: 30px;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+form{
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: px;
+    
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;  
+    height: 50%; 
+    /* padding: px;  */
+  }
+  
+  label {
+    width: 100px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  input,select {
+    width: 300px;
+    height: 50px;
+    resize: none;
+    margin: 7px;
+    align-content: center;
+  }
+  
+  button[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 95%;
+    /* float: right; */
+    /* position: static; */
+  }
+  
+  button[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+
+  /* .dropdown {
+    position: relative;
+    display: inline-block;
+    } */
+    .dropdown-content {
+    display: none;
+    position: absolute;
+	color: #000;
+    font-weight: bold;
+    border: 1px black solid;
+    font-size: 18px;
+    text-align: center;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    border: 1px black solid;
+
+    }
+    .dropdown-content a {
+    display: block;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    background-color: gray;
+    color: black;
+    }
+    .dropdown-content a:hover {
+    background-color: white;
+    color: black;
+    }
+    
+    

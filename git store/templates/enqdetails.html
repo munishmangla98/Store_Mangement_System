@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: green;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body>
+
+<h2>Enquiry Details</h2>
+<!-- <a href="/edit/0">
+    <button class="btn btn-primary text-uppercase"> 
+    Add a new post
+    </button>
+    </a> -->
+<!-- <p>If you have a table that is too wide, you can add a container element with overflow-x:auto around the table, and it will display a horizontal scroll bar when needed.</p> -->
+<!-- <p>Resize the browser window to see the effect. Try to remove the div element and see what happens to the table.</p> -->
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <th>Sr.no</th>
+      <th>Team Member Name</th>
+      <th>ID No</th>
+      <th>Email</th>
+      <th>Mobile No</th>
+      <th>Enquiry</th>
+      <!-- <th>Action</th> -->
+  
+      
+    </thead>
+    <tbody>
+    
+      {% for enq in enq %}
+      <tr>
+        <td>{{enq.sno}}</td>
+        <td>{{enq.username}}</td>
+        <td>{{enq.id_no}}</td>
+        <td>{{enq.email}}</td>
+        <td>{{enq.phone_num}}</td>
+        <td>{{enq.enquiry}}</td>
+        
+
+        <td>
+          <!-- <a href="/editprepro/{{enq.sno}}" target="_blank" class="btnedit" >Edit</a> -->
+
+          <!-- <a href="/deleteenq/{{enq.sno}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a> -->
+          
+          <!-- <button id="sendMessage" type="submit">submit</button> </a> -->
+        </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+
+  <!-- <button id="sendMessage" type="submit">submit</button> -->
+</div>
+
+</body>
+</html>

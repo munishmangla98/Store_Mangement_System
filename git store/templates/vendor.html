@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+        <main>
+            <div class="infotable">
+
+                <table>
+                    <thead>
+                        <!-- <th>Budget_head_id</th> -->
+                        <a href="/add_ven"  class="btnaddnew">Add New</a>
+                    </thead>
+                    <thead>
+                        <th>Ven_id</th>
+                        <th>DOR</th>
+                        <th>Company_Name</th>
+                        <th>GST_NO</th>
+                        <th>Email</th>
+                        <th>Mobile-No</th>
+                        <th>A-Mobile-No</th>
+                        <th>Status</th>
+                        <!-- <th>A-Mobile-No</th> -->
+                        <th>House_Address</th>
+                        <th>Remarks</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {% for vendor_master in vendor_master %}
+                        
+                        <tr>
+                            <td>{{vendor_master.vendor_id}}</td>
+                            <td>{{vendor_master.date_of_registration}}</td>
+                            <td>{{vendor_master.vendor_company_name}}</td>
+                            <td>{{vendor_master.GST_NO}}</td>
+                            <td>{{vendor_master.vendor_email}}</td>
+                            <td>{{vendor_master.vendor_mobile_num}}</td>
+                            <td>{{vendor_master.vendor_alternative_mobile_num}}</td>
+                            <td>{{vendor_master.vendor_status}}</td>
+                            <td>{{vendor_master.vendor_addres}}</td>
+                            <td>{{vendor_master.Remarks}}</td>
+                            <td>
+                                <a href="/venupdate/{{vendor_master.vendor_id}}" class="btnedit" >Edit</a>
+                      
+                                <a href="/deletevendor/{{vendor_master.vendor_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+                            </td>
+                          </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+{% endblock %}
+

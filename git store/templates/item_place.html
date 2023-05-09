@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="{{url_for('static',filename='style5.css')}}" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Product Update</header>
+      
+      <form action="/item_place" class="form" method="post">
+<!-- 
+        {%with messages = get_flashed_messages()%}
+
+        {%if messages%}
+
+        {%for message in messages%}
+        <div class="alert alert-sucess alert-dismissable" role="alert">
+          <botton type="botton" class="close" data-dismiss="alert" aria-lable="close">
+            <span aria-hidden="true"></span>
+          </botton>
+          {{message}}
+        </div>
+
+        {{message}} 
+
+        {%endfor%}
+        {%endif%}
+        {%endwith%} -->
+
+        <div class="input-box">
+          <label>Item Place Id</label>
+          <input type="text" placeholder="Item Place Id" id="itm_plc_id" name="itm_plc_id" required />
+        </div>
+
+        <div class="input-box">
+          <label>Item_Name</label>
+          <input type="text" placeholder="Item_Name" id="itm_name" name="itm_name" required />
+        </div>
+
+        <div class="input-box">
+          <label>Item_Place</label>
+          <input type="text" placeholder="Product Id" id="itm_plc" name="itm_plc" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>No. of Item</label>
+            <input type="number" placeholder="Enter no. Of Products" id="no_itm" name="no_itm" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Remarks</label>
+            <input type="text" placeholder="Enter Remarks" id="rmks" name="rmks" required />
+          </div>
+        </div>
+
+        <!-- <div class="column">
+          <div class="input-box">
+            <label>Delivered Product</label>
+            <input type="text" placeholder="Delivered Products" id="delvpro" name="delvpro" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Remaining Product</label>
+            <input type="text" placeholder="Remaining Product" id="rempro" name="rempro" required />
+          </div>
+        </div> -->
+
+        <button>Submit</button>
+
+        <!-- {%with messages = get_flashed_messages()%}
+
+        {%if messages%}
+
+        {%for message in messages%}
+
+        {{message}}
+
+        {%endfor%}
+        {%endif%}
+        {%endwith%} -->
+
+      </form>
+    </section>
+  </body>
+</html>

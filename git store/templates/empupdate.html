@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <h1>Add New employee</h1>
+    </div>
+    {%with messages = get_flashed_messages()%}
+
+{%if messages%}
+
+{%for message in messages%}
+<div class="alert alert-sucess alert-dismissable" role="alert" style="color:green; font-weight: bolder; text-align: center;">
+    <span aria-hidden="true"></span>
+  </botton>
+  {{message}}
+</div>
+
+<!-- {{message}} -->
+
+{%endfor%}
+{%endif%}
+{%endwith%}
+    <form action="/empupdate/{{employee_master.employee_id}}" method="post">
+        <div class="row">
+            <label>Date Of Registration</label>
+            <input type="date" placeholder="Enter Date_Of_Registration" id="registration" name="registration" value="{{employee_master.date_of_registration}}" required>
+
+            <label>Email</label>
+            <input type="text" placeholder="Enter Staff_Email" id="email" name="email" value="{{employee_master.staff_email}}" required>
+            
+            <label>Nature Of JOB</label>
+            <input type="text" placeholder="Enter Nature_Of_JOB" id="noj" name="noj" value="{{employee_master.nature_of_job}}" required>
+        </div>
+        <div class="row">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter Staff_FName" id="Fname" name="Fname" value="{{employee_master.staff_Fname}}" required>
+            <label>Mid Name</label>
+            <input type="text" placeholder="Enter Staff_MName" id="Mname" name="Mname" value="{{employee_master.staff_Mname}}" required>
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter Staff_LName" id="Lname" name="Lname" value="{{employee_master.staff_Lname}}" required>
+
+        </div>
+        <div class="row">
+            <label>Mobile_No.</label>
+            <input type="number" placeholder="Enter Staff_Mobile_No" id="mobile_no" name="mobile_no" value="{{employee_master.staff_mobile_no}}" required>
+
+            <label>Mobile_No</label>
+            <input type="number" placeholder="Enter Staff_Alternative_Mobile_No" id="alternative_mobile_no" name="alternative_mobile_no" value="{{employee_master.staff_alternative_mobile_no}}" required>
+            <label>Staff Category</label>
+            <select id="category" name="category" value="{{employee_master.staff_category}}" >
+                <option disabled selected>Staff_Category</option>
+                <option value="teaching">Teaching</option>
+                <option value="Non-Teaching">Non-Teaching</option>
+                <!-- <option>Others</option> -->
+            </select>
+                </div>
+        <div class="row">
+            <label>Date of Joining</label>
+            <input type="date" placeholder="Enter Date_Of_Joing" id="doj" name="doj" value="{{employee_master.staff_date_of_joining}}" required>
+            <label>Date Of Retirement</label>
+            <input type="date" placeholder="Enter Date_Of_Retirement" id="dor" name="dor" value="{{employee_master.staff_date_of_retirement}}" required>
+            <label>Designation</label>
+            <input type="text" placeholder="Enter Staff_Designation" id="designation" name="designation" value="{{employee_master.staff_designatin}}" required>
+        </div>
+        
+        <div class="row">
+
+
+        </div>
+        <div class="row">
+            <label>Staff Gender</label>
+                            <select required id="gender" name="gender" value="{{employee_master.staff_gender}}">
+                                <option disabled selected>Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option>Others</option>
+                            </select>
+            <label>House Address</label>
+            <input type="text" placeholder="Enter Staff_House_Address" id="house_address" name="house_address" value="{{employee_master.staff_house_address}}" required>
+
+            <label>Remarks</label>
+            <input type="text" placeholder="Enter Remarks" id="remarks" name="remarks" value="{{employee_master.staff_remarks}}" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

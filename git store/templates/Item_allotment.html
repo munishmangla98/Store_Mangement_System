@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{{url_for('static',filename='style13.css')}}">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Item Allotment Form </title> 
+</head>
+<body>
+    <div class="container">
+        <header>Item Allotment</header>
+
+        <form action="/Item_allotment" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Item_Allotment</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Allotment_ID</label>
+                            <input type="text" placeholder="Enter Allotment_ID" id="a_id" name="a_id" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Employee_ID</label>
+                            <input type="text" placeholder="Enter Employee_ID" id="e_id" name="e_id" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Item_ID</label>
+                            <input type="text" placeholder="Enter Item_ID" id="itm_id" name="itm_id" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Item_Issues_date</label>
+                            <input type="date" placeholder="Enter Item_Issues_date" id="i_i_d" name="i_i_d" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Item_Quantity_Issues</label>
+                            <input type="number" placeholder="Enter Item_Quantity_Issues" id="i_q_i" name="i_q_i" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Item_Placement_Area</label>
+                            <input type="text" placeholder="Enter Item_Placement_Area" id="i_p_a" name="i_p_a" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Project_ID</label>
+                            <input type="text" placeholder="Enter Project_ID" id="prj_id" name="prj_id" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Remarks</label>
+                            <input type="text" placeholder="Enter Remarks" id="rk" name="rk" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <!-- <span class="title">Item_Details</span> -->
+
+                    <div class="fields">
+                        <!-- <div class="input-field">
+                            <label>Project_ID</label>
+                            <input type="text" placeholder="Enter Project_ID" id="prj_id" name="prj_id" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Transaction_ID</label>
+                            <input type="text" placeholder="Enter Transaction_ID" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Bill NO.</label>
+                            <input type="text" placeholder="Enter Bill NO." required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Budget_ID</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Item_Purchase_Date</label>
+                            <input type="date" placeholder="Enter Your Purchase Date" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Purchase_Under_Dept_Project</label>
+                            <input type="text" placeholder="Enter Dept/Project" required>
+                        </div> -->
+                        <!-- <div class="input-field">
+                            <label>Stock_Register_page_No.</label>
+                            <input type="text" placeholder="Enter Register Page No." required>
+                        </div> -->
+                        <!-- <div class="input-field">
+                            <label>Online_Entry_ID</label>
+                            <input type="text" placeholder="Enter Entry_ID" required>
+                        </div> -->
+                    </div>
+
+                    <!-- <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button> -->
+                    <button class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <!-- <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" placeholder="Enter block number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div> -->
+                        
+                        <!-- <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button> -->
+                    <!-- </div> -->
+                <!-- </div>  -->
+            </div>
+        </form>
+    </div>
+
+    <script src="{{url_for('static',filename='script8.js')}}"></script>
+</body>
+</html>

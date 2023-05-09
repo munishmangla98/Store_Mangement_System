@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+        <main>
+            <div class="addnew">
+               
+                <a href="/add_budget" class="btnaddnew" >Add New</a>
+             
+                </h1>
+            </div>
+            <div class="infotable">
+
+                <table>
+                    <thead>
+                        <th>Budget_head_id</th>
+                        <th>Budget_name</th>
+                        <th>budget_amount</th>
+                        <th>Session</th>
+                        <th>Remarks</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {% for budget_head in budget_head %}
+                        <tr>
+                            <td>{{budget_head.Budget_head_id}}</td>
+                            <td>{{budget_head.Budget_name}}</td>
+                            <td>{{budget_head.budget_amount}}</td>
+                            <td>{{budget_head.Session}}</td>
+                            <td>{{budget_head.Remarks}}</td>
+                            <td>
+                                <a href=" " target="_blank" class="btnedit">Edit</a>
+                                <a href="/deleteBgthd/{{budget_head.Budget_head_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+
+                        </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+{% endblock %}
+

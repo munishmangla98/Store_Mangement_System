@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{{url_for('static',filename='style15.css')}}">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Employee_Master Form </title> 
+</head>
+<body>
+    <div class="container">
+        <header>Employee_Master</header>
+
+        <form action="/Employee_master" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Employee_Master</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Employee_ID</label>
+                            <input type="text" placeholder="Enter Employee_ID" id="e_id" name="e_id" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date_Of_Registration</label>
+                            <input type="date" placeholder="Enter Date_Of_Registration" id="registration" name="registration" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_FName</label>
+                            <input type="text" placeholder="Enter Staff_FName" id="Fname" name="Fname" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_MName</label>
+                            <input type="text" placeholder="Enter Staff_MName" id="Mname" name="Mname" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_LName</label>
+                            <input type="text" placeholder="Enter Staff_LName" id="Lname" name="Lname" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_Email</label>
+                            <input type="text" placeholder="Enter Staff_Email" id="email" name="email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_Mobile_No.</label>
+                            <input type="number" placeholder="Enter Staff_Mobile_No" id="mobile_no" name="mobile_no" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_Alternative_Mobile_No</label>
+                            <input type="number" placeholder="Enter Staff_Alternative_Mobile_No" id="alternative_mobile_no" name="alternative_mobile_no" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Staff_Gender</label>
+                            <select required id="gender" name="gender">
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Nature_Of_JOB</label>
+                            <select required id="nature_of_job" name="nature_of_job">
+                                <option disabled selected>Nature_Of_JOB</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>Nature_Of_JOB</label>
+                            <input type="text" placeholder="Enter Nature_Of_JOB" id="noj" name="noj" required>
+                        </div>
+                        <!-- <div class="input-field">
+                            <label>Nature_Of_JOB</label>
+                            <input type="text" placeholder="Nature_Of_JOB" required>
+                        </div> -->
+                        <div class="input-field">
+                            <label>Staff_Date_Of_Joing</label>
+                            <input type="date" placeholder="Enter Date_Of_Joing" id="doj" name="doj" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Staff_Date_Of_Retirement</label>
+                            <input type="date" placeholder="Enter Date_Of_Retirement" id="dor" name="dor" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Staff_Category</label>
+                            <select required id="category" name="category">
+                                <option disabled selected>Staff_Category</option>
+                                <option>Teaching</option>
+                                <option>Non-Teaching</option>
+                                <!-- <option>Others</option> -->
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Staff_Designation</label>
+                            <input type="text" placeholder="Enter Staff_Designation" id="designation" name="designation" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Staff_House_Address</label>
+                            <input type="text" placeholder="Enter Staff_House_Address" id="house_address" name="house_address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <!-- <span class="title">Item_Details</span> -->
+
+                    <div class="fields">
+                        <!-- <div class="input-field">
+                            <label>Staff_Date_Of_Joing</label>
+                            <input type="text" placeholder="Enter Date_Of_Joing" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Staff_Date_Of_Retirement</label>
+                            <input type="text" placeholder="Enter Date_Of_Retirement" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Staff_Category</label>
+                            <select required id="Staff_Category" name="Staff_Category">
+                                <option disabled selected>Staff_Category</option>
+                                <option>Teaching</option>
+                                <option>Non-Teaching</option>
+                                <option>Others</option>
+                            </select>
+                        </div> -->
+
+                        
+                        
+                        <div class="input-field">
+                            <label>Remarks</label>
+                            <input type="text" placeholder="Enter Remarks" id="remarks" name="remarks" required>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Budget_ID</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Item_Purchase_Date</label>
+                            <input type="date" placeholder="Enter Your Purchase Date" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Purchase_Under_Dept_Project</label>
+                            <input type="text" placeholder="Enter Dept/Project" required>
+                        </div> -->
+                        <!-- <div class="input-field">
+                            <label>Stock_Register_page_No.</label>
+                            <input type="text" placeholder="Enter Register Page No." required>
+                        </div> -->
+                        <!-- <div class="input-field">
+                            <label>Online_Entry_ID</label>
+                            <input type="text" placeholder="Enter Entry_ID" required>
+                        </div> -->
+                    </div>
+
+                    <!-- <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button> -->
+                    <button class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <!-- <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" placeholder="Enter block number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div> -->
+                        
+                        <!-- <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button> -->
+                    <!-- </div> -->
+                <!-- </div>  -->
+            </div>
+        </form>
+    </div>
+
+    <script src="{{url_for('static',filename='script10')}}"></script>
+</body>
+</html>

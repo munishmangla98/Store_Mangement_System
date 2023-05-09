@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<main>
+    <div>
+        <a href="/budget" class="btnaddnew" >Budget Details</a>
+    </div>
+    <form action="/add_budget" class="form" method="post">
+        <div class="row">
+            <label>Budget_Name</label>
+            <input type="text" placeholder="Enter Budget_Name" id="bgt_name" name="bgt_name" required />
+            <label>Buget_amount</label>
+          <input type="text" placeholder="Enter Buget_amount" id="bgt_amt" name="bgt_amt" required />
+
+          
+        </div>
+
+        <div class="row">
+            <label>Budget_Session</label>
+            <input type="text" placeholder="Enter Budget_Session" id="secn" name="secn" required />
+            <label>Remarks</label>
+            <input type="text" placeholder="Enter Remarks" id="rmk" name="rmk" required />
+        </div>
+
+
+
+
+        
+
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: darkgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 15px;
+  padding-left: 0px;
+  /* margin-left:0px; */
+  height: 100px; /* Used in this example to enable scrolling */
+  overflow: hidden;
+  position: fixed;
+  top: 8px;
+  /* left: 0px; */
+  width: 100%;
+}
+.main h1{
+	background-color: aqua;
+	padding-left: 10px;
+	top: 8px;
+	height: 36px;
+	margin-left:0px ;
+	text-align: center;
+}
+.infotable table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  /* overflow-y: auto;
+  overflow-x: auto; */
+  overflow: auto;
+  border: 1px solid black;
+  margin-top: 80px;
+}
+th{
+	position: sticky;
+	top: 70px;
+	background-color: antiquewhite;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/Order_transaction_details">Add New Order_transaction</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>Order_Transaction__Full__Details</h1>
+</div>
+
+<div class="infotable">
+
+	<table>
+		<thead>
+			<th>Transtion_id</th>
+			<th>Vendor_id</th>
+			<th>Order_id</th>
+			<th>Item_id</th>
+			<th>Item Receive Date</th>
+			<th>Remarks</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			{% for order__transaction__details in order__transaction__details %}
+		  <tr>
+			<td>{{order__transaction__details.transaction_id}}</td>
+			<td>{{order__transaction__details.order_id}}</td>
+			<td>{{order__transaction__details.vendor_id}}</td>
+			<td>{{order__transaction__details.item_id}}</td>
+			<td>{{order__transaction__details.item_received_date}}</td>
+      <td>{{order__transaction__details.Remarks}}</td>
+			<td>
+				<a href="/editprepro/{{order__transaction__details.transaction_id}}" target="_blank" class="btnedit" >Edit</a>
+	  
+				<a href="/deleteorder/{{order__transaction__details.transaction_id}}" <button class="btndanger" onclick="return confirm('Are you sur to Delete the data')" type="button" >DELETE</button></a>
+			</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
+
